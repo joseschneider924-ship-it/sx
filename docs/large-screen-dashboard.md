@@ -82,3 +82,38 @@ Figma 文件：https://www.figma.com/design/0BhdxOq0CSEyXYje6Jt35z
 
 所有图表（柱状、折线、环形、仪表盘、地图节点）都是可编辑的矢量和文字图层；
 屏幕上的数据均为示例数据。地图轮廓仅为示意，用于真实项目时请替换为标准地图底图。
+
+---
+
+# V2 · 参考风格版（供应链数据中台）
+
+- 主画板：`大屏 V2 / 供应链数据中台 1920×1080（参考风格）`（node `14:327`，在 V1 右侧，x = 2040）
+- 组件库：`🧩 Components V2`（位于 V2 画板下方）
+
+## 风格要点
+
+- 面板去掉边框，用「英文大写标题 + 中文副标题 + 发光弧形下划线」区分版块，右侧带「图 / 表」切换。
+- 背景是深蓝径向渐变，叠加地形等高线纹理和左右暗角。
+- 中央是 3D 挤出的中国地图：顶面渐变、侧面分层挤出、地面光晕、轨道环；湖北区域抬升高亮，并带光柱信标和括号式信息弹窗。
+- 顶部左侧是斜切标题牌，右侧是发光下划线导航；底部中央是弧形图标 Dock。
+- 新增颜色变量：`bg/deep`、`accent/teal`、`accent/sky`、`accent/orange`。
+- 新增文字样式：`V2/Section Title`、`V2/Platform Title`、`V2/Nav`。
+
+## 版块
+
+| 区域 | 内容 |
+| --- | --- |
+| 左栏 | CAPACITY 仓储容量（大数字 + 环形进度）、STATISTICS 采购统计（分段渐变柱）、SUPPLIERS 供应商数据（首行高亮表格） |
+| 中栏上方 | ORDER 订单 / STOCK 库存：弧形图标指标（蓝 / 橙两种色调） |
+| 中栏 | 3D 地图 + 华中枢纽弹窗 |
+| 中栏下方 | VOLUME 区域运量对比（左右对称的出库 / 入库条形图） |
+| 右栏 | MONITORING 监测数据（键值胶囊）、WORKFORCE 人员结构（雷达图）、DELIVERY 交付趋势（双柱 + 曲线）、KEY PARTNER 重点合作伙伴（轮播卡片） |
+
+## V2 组件
+
+| 组件 | 属性 |
+| --- | --- |
+| `V2/Section Title` | Title EN、Title CN、Show Toggle |
+| `V2/Arc Stat`（Tone = Sky / Orange） | Label、Value、Unit |
+| `V2/KV Pill` | Label、Value |
+| `V2/Table Header`、`V2/Table Row` | 序号、供应商、品类、订单数、金额(万)、准时率 |
